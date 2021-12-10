@@ -309,7 +309,6 @@ img {
 }
 .team-text {
   display: flex;
-  padding: 0 15px;
 }
 .team-text li:last-child {
   margin-right: 0;
@@ -367,7 +366,7 @@ img {
   display: flex;
   align-items: center;
   color: #afb1b8;
-  transition-property: color;
+  transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -513,8 +512,6 @@ img {
 }
 .regular-clients-list {
   display: flex;
-  justify-content: center;
-  padding: 0 15px;
 }
 .regular-clients-item:not(:last-child) {
   margin-right: 30px;
@@ -528,7 +525,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
-  transition-property: color;
+  transition-property: color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -639,9 +636,14 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-item:hover .portfolio-item-text {
+.portfolio-item:hover .portfolio-item-text,
+.portfolio-item:focus .portfolio-item-text {
   transform: translateY(0);
 }
+.portfolio-link:focus .portfolio-item-text {
+  transform: translateY(0);
+}
+
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
